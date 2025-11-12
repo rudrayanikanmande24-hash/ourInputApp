@@ -1,0 +1,149 @@
+<h3>1. Meeting Details</h3>
+<p class="alert alert-info">Title: {{ meeting.title }}
+Date: {{ meeting.schedule.date }}
+Time: {{ meeting.schedule.time }} Location: {{ meeting.schedule.location.room }}, {{ meeting.schedule.location.city }}</p>
+
+
+<h3>2. Student Details</h3>
+
+<p class="alert alert-danger">
+  {{student.name}} scored {{student.grades.subjects[0].marks}} in {{student.grades.subjects[0].name}} and in {{student.grades.subjects[1].marks}}, making her overall grade {{student.grades.overall}}%.
+</p>
+
+<h3>3. Employee information</h3>
+<p class="alert alert-warning">
+  Employee Id: {{emp.id}},
+<br>
+  Employee Info :- 
+  <br>
+  Name : {{emp.info.name}},
+  <br>
+  Position : Department {{emp.info.department.name}}, Floor {{emp.info.department.floor}} 
+</p>
+
+<h3>4. Booking</h3>
+
+<p class="alert alert-info">
+   Passenger Name: {{booking.passenger.name}} , Passenger Age:{{booking.passenger.age}} and Trip from {{booking.trip.from}} to {{booking.trip.to}} Date:{{booking.trip.date}} and seat : type{{booking.trip.seat.type}} number {{booking.trip.seat.number}}
+</p>
+
+<h3>5. Course</h3>
+<p class="alert alert-light">
+    Course Name:{{course.title}} and Duration:{{course.duration}} Instructor Name:{{course.instructor.name}} Instructor Contact: email {{course.instructor.contact.email}} phone {{course.instructor.contact.phone}}
+</p>
+<h3>6. Order</h3>
+<p class="alert alert-primary">
+    {{order.customer.name}} purchased a {{order.items[0].name}} and {{order.items[1].name}} for a total of Rs.{{order.total}}
+</p>
+<h3>7. Playlist</h3>
+<p class="alert alert-warning">
+    {{playlist.createdBy}}'s {{playlist.name}} aylist includes {{playlist.songs[0].title}} by {{playlist.songs[0].artist}}."
+</p>
+<h3>8. Enrollment</h3>
+<p class="alert alert-info">
+  Student Name:{{enrollment.student.name}} Id:{{enrollment.student.id}} Year:{{enrollment.student.year}} Program: {{enrollment.student.program.name}} Department:{{enrollment.student.program.department}} Semester:{{enrollment.semester}} subjects : {{enrollment.subjects[0].code}} {{enrollment.subjects[0].title}} and {{enrollment.subjects[1].code}} {{enrollment.subjects[1].title}}
+</p>
+<h3>9. PatientRecord</h3>
+<p class="alert alert-danger">{{patientRecord.name}} visited Dr. {{patientRecord.visit.doctor.name}} from {{patientRecord.visit.doctor.department}} on {{patientRecord.visit.date}}.</p>
+<h3>10. Transaction</h3>
+<p class="alert alert-primary">
+  {{transaction.account.holder}} credited ₹{{transaction.details.amount}} to his account at the {{transaction.details.branch.name}} branch (IFSC: {{transaction.details.branch.ifsc}}) on {{transaction.details.date}}.
+</p>
+<h3>11. Product</h3>
+<p class="alert alert-warning">
+  The {{product.manufacturer.brand}} {{product.name}} costs ₹{{product.price}} and has a {{product.reviews.rating}}-star rating from {{product.reviews.total}} reviews.
+</p>
+<h3>12. Movie</h3>
+<p class="alert alert-info">
+   {{movie.info.title}}, directed by {{movie.info.director.name}} , was released in {{movie.info.release.year}} in the {{movie.info.release.language}} language.
+</p>
+<h3>13. Shipment</h3>
+<p class="alert alert-danger">
+  TRaking Id :{{shipment.trackingId}}, destination details city:{{shipment.destination.city}} Country: {{shipment.destination.country}} and Current delivary {{shipment.status.current}} {{shipment.status.lastUpdated}}
+</p>
+<h3>14. Admission</h3>
+<p class="alert alert-info">
+  {{admission.student.name}} has been admitted to {{admission.college.name}} for {{admission.college.course}} from July {{admission.session.start}} to May {{admission.session.end}}.
+</p>
+<h3>15. Conference</h3>
+<p class="alert alert-warning">
+  {{conference.name}} {{conference.year}} in {{conference.location.city}} will feature talks on {{conference.speakers[0].topic}} and {{conference.speakers[1].topic}}.
+</p>
+<h3>16. Invoice</h3>
+<p class="alert alert-warning">
+  InvoiceNo:{{invoice.invoiceNo}} custome Name:{{invoice.customer.name}} city {{invoice.customer.city}}
+  items : {{invoice.billing.items[0].name}} price : {{invoice.billing.items[0].price}}   items : {{invoice.billing.items[1].name}} price : {{invoice.billing.items[1].price}} Total : {{invoice.billing.total}} {{invoice.date}}
+
+</p>
+<h3>17. Oreder</h3>
+<p class="alert alert-info">
+  {{orderNow.orderId}} {{orderNow.customer.name}} {{orderNow.customer.location}} {{orderNow.items[0].name}} {{orderNow.items[0].price}} {{orderNow.items[1].name}} {{orderNow.items[1].price}} {{orderNow.totalAmount}}
+</p>
+<h3>18. Ticket</h3>
+<p class="alert alert-light">
+  {{ticket.passenger.name}} is traveling from {{ticket.flight.route.from}} to {{ticket.flight.route.to}} on flight {{ticket.flight.number}}.
+</p>
+<h3>19. TransactionBank</h3>
+<p class="alert alert-info">
+  Transaction ID: {{transactionBank.txnId}} <br>
+  Sender: {{transactionBank.sender.name}} ({{transactionBank.sender.account}}) <br>
+  Receiver: {{transactionBank.receiver.name}} ({{transactionBank.receiver.account}}) <br>
+  Amount: ₹{{transactionBank.amount}} <br>
+  Date: {{transactionBank.date}}
+</p>
+<h3>20. ProductSell</h3>
+<p class="alert alert-danger">
+  Product ID: {{productSell.id}} <br>
+  Title: {{productSell.title}} <br>
+  Processor: {{productSell.specs.processor}} <br>
+  Storage: {{productSell.specs.storage}} <br>
+  Color: {{productSell.specs.color}} <br>
+  Price: ₹{{productSell.price}}
+</p>
+<h3>21. GuestBook</h3>
+<p class="alert alert-info">
+  Booking ID: {{j.bookingId}} <br>
+  Guest Name: {{j.guest.name}} <br>
+  Nights: {{j.guest.nights}} <br>
+  Hotel: {{j.hotel.name}}, {{j.hotel.city}} <br>
+  </p>
+  <h3>22. Cart</h3>
+<p class="alert alert-info">
+  User: {{r.user.name}} <br>
+  Items: <br>
+  {{r.items[0].name}} - Qty: {{r.items[0].quantity}}, Price: ₹{{r.items[0].price}} <br>
+  {{r.items[1].name}} - Qty: {{r.items[1].quantity}}, Price: ₹{{r.items[1].price}}
+  </p>
+<h3>23. restaurantOrder</h3>
+<p class="alert alert-info">
+  {{restur.customer.name}} at table {{restur.customer.table}} 
+  ordered {{restur.items[0].name}} and {{restur.items[1].name}}.
+  <br>
+  Total Bill: ₹{{restur.total}}
+</p>
+<h3>24. classSchedule</h3>
+<p class="alert alert-danger">
+  Subject: {{k.subject}} <br>
+  Teacher: {{k.teacher.name}} <br>
+  Room: {{k.teacher.room}} <br>
+  Time: {{k.time.start}} - {{k.time.end}}
+</p>
+
+<h3>25. ecommerceOrder</h3>
+<p class="alert alert-warning">
+  Order ID: {{ecommerceOrder.orderId}} <br>
+  Customer: {{ecommerceOrder.customer.name}} <br>
+  Email: {{ecommerceOrder.customer.contact.email}} <br>
+  Phone: {{ecommerceOrder.customer.contact.phone}} <br>
+  Address: {{ecommerceOrder.customer.address.street}}, 
+  {{ecommerceOrder.customer.address.city}} - 
+  {{ecommerceOrder.customer.address.pin}} <br>
+  Ordered Items: 
+  {{ecommerceOrder.items[0].name}} (₹{{ecommerceOrder.items[0].price}}) and 
+  {{ecommerceOrder.items[1].name}} (₹{{ecommerceOrder.items[1].price}}) <br>
+  Payment: {{ecommerceOrder.payment.mode}} - {{ecommerceOrder.payment.status}} <br>
+  Delivery Status: {{ecommerceOrder.delivery.status}} 
+  (Expected: {{ecommerceOrder.delivery.expected}})
+</p>
+
+
